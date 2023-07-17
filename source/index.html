@@ -52,15 +52,19 @@
   </script>
 </head>
 <body class="antialiased">
-  <div class="max-w-sm sm:max-w-md mx-auto my-6 bg-white ring-1 ring-gray-600/5 shadow-2xl py-12 px-6 sm:px-12 rounded-3xl space-y-5">
+  <div class="bg-mint h-64 w-[100%] absolute -top-36 -skew-y-6 z-0"></div>
+  <div class="max-w-sm sm:max-w-md mx-auto my-6 bg-white ring-1 ring-gray-600/5 shadow-2xl py-12 px-6 sm:px-12 rounded-3xl space-y-5 z-1 relative">
     <div class="flex items-center">
 	  <div class="shrink-0 w-[70px] mr-4">
-		<img class="rounded-full" src="assets/profile_picture_2.jpg" width="70" height="70" srcset="assets/profile_picture_2@2x.jpg 2x" alt="Janis Freimann">
+		<picture>
+			<source srcset="assets/pfp-2023@05x.webp 1x, assets/pfp-2023.webp 2x" type="image/webp">
+			<img class="rounded-full" src="assets/pfp-2023@05x.jpg" width="70" height="70" srcset="assets/pfp-2023.jpg 2x" alt="Janis Freimann">
+		</picture>
 	  </div>
 	  <div>
 		<h1 class="font-bold text-2xl">Janis Freimann</h1>
 		<div>
-		  <pre class="text-xs font-bold text-red-700 my-2">@janisfreimann</pre>
+		  <pre class="text-xs font-bold text-mint my-2">@janisfreimann</pre>
 		  <span>Location-independent web developer and entrepreneur.</span>
 	    </div>
 	  </div>
@@ -68,11 +72,11 @@
     <div class="text-center space-y-4">
       <h2 class="font-bold text-xl">My Contacts</h2>
 	  <a href="https://janfrei.me" target="_blank" class="block bg-gray-100 py-2 px-4 rounded-md focus:ring-1 focus:ring-inset focus:ring-red-800/30">
-		<span class="block font-medium text-red-700">janfrei.me</span>
+		<span class="block font-medium text-mint">janfrei.me</span>
 	    <small class="text-xs">Personal Blog &amp; Portfolio</small>
 	  </a>
 	  <a href="https://getrealcreative.co" target="_blank" class="block bg-gray-100 py-2 px-4 rounded-md focus:ring-1 focus:ring-inset focus:ring-red-800/30">
-		<span class="block font-medium text-red-700">getrealcreative.co</span>
+		<span class="block font-medium text-mint">getrealcreative.co</span>
 		<small class="text-xs">Get Real Creative Collective<br>Branding, Web Design and Development</small>
 	  </a>
     </div>

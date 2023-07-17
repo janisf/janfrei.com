@@ -26,7 +26,8 @@ module.exports =
 			github: '#333' ,
 			instagram: '#E4445C',
 			telegram: '#2999D1',
-			twitter: '#1B95E0'
+			twitter: '#1B95E0',
+      mint: '#408b6b'
 		}
 	}
   },
