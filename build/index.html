@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/main.css?v=1.0.2">
+  <link rel="stylesheet" href="css/main.css?v=1.0.3">
   <title>Janis Freimann</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142593637-2"></script>
   <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>
@@ -89,8 +89,8 @@
 		<small class="text-xs">Get Real Creative Collective<br>Branding, Web Design and Development</small>
 	  </a>
     </div>
-	<div id="social-media-links" class="grid grid-cols-2 gap-y-3 gap-x-8">
-	    <div v-for="item in socialMedia">
+	<div id="social-media-links" class="flex flex-wrap gap-3 justify-center">
+	    <div v-for="item in socialMedia" class="basis-[30%]">
 		  <a :href="item.url" target="_blank" :class="[item.color, 'bg-gray-200 transition-colors duration-300 flex items-center justify-center p-4 rounded-lg outline-none']" v-html="item.icon"></a>
 	    </div>
 	</div>
