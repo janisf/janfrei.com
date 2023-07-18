@@ -27,6 +27,8 @@ module.exports =
 			instagram: '#E4445C',
 			telegram: '#2999D1',
 			twitter: '#1B95E0',
+      nomadlist: '#ff4742',
+      threads: '#000000',
       mint: '#408b6b'
 		}
 	}

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    #social-media-links svg path {
+        @apply fill-gray-500;
+    }
+
+    #social-media-links a:hover svg path,
+    #social-media-links a:focus-visible svg path {
+        @apply fill-white;
+    }
+}
