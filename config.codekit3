@@ -7,7 +7,7 @@
       "uuidString" : "0DB1072E-CDB0-427F-B6C8-BC6736AC3985"
     }
   ],
-  "creatorBuild" : "34510",
+  "creatorBuild" : "34513",
   "files" : {
     "\/.github\/workflows\/static.yml" : {
       "cB" : 0,
@@ -83,12 +83,12 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/source\/assets\/pfp-2023.jpg" : {
+    "\/source\/assets\/profile.jpg" : {
       "ft" : 16384,
-      "iS" : 13713,
+      "iS" : 19588,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/pfp-2023.jpg",
+      "oAP" : "\/build\/assets\/profile.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -96,12 +96,12 @@
       "q" : 100,
       "rq" : 100
     },
-    "\/source\/assets\/pfp-2023@05x.jpg" : {
+    "\/source\/assets\/profile@05x.jpg" : {
       "ft" : 16384,
-      "iS" : 4708,
+      "iS" : 7407,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/pfp-2023@05x.jpg",
+      "oAP" : "\/build\/assets\/profile@05x.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -1047,9 +1047,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

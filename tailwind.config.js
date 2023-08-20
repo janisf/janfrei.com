@@ -29,7 +29,7 @@ module.exports =
 			twitter: '#1B95E0',
       nomadlist: '#ff4742',
       threads: '#000000',
-      mint: '#408b6b'
+      mint: '#83CEB2'
 		}
 	}
   },
