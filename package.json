@@ -1,6 +1,6 @@
 {
   "name": "janfrei-com",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CodeKit created this starter package.json file. You should customize it appropriately. (If you intend to publish this project on npm, add an entry in the 'repository' field and remove the 'private' attribute, below.)",
   "scripts": {},
   "author": "Janis Freimann",

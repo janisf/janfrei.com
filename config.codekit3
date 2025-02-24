@@ -7,7 +7,7 @@
       "uuidString" : "0DB1072E-CDB0-427F-B6C8-BC6736AC3985"
     }
   ],
-  "creatorBuild" : "34513",
+  "creatorBuild" : "34592",
   "files" : {
     "\/.github\/workflows\/static.yml" : {
       "cB" : 0,
@@ -83,12 +83,12 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/source\/assets\/profile.jpg" : {
+    "\/source\/assets\/profile-2025.jpg" : {
       "ft" : 16384,
-      "iS" : 19588,
+      "iS" : 20748,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/profile.jpg",
+      "oAP" : "\/build\/assets\/profile-2025.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -96,12 +96,12 @@
       "q" : 100,
       "rq" : 100
     },
-    "\/source\/assets\/profile@05x.jpg" : {
+    "\/source\/assets\/profile-2025@0.5x.jpg" : {
       "ft" : 16384,
-      "iS" : 7407,
+      "iS" : 9981,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/profile@05x.jpg",
+      "oAP" : "\/build\/assets\/profile-2025@0.5x.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -653,10 +653,6 @@
         "active" : 0,
         "optionString" : "{'before': true, 'after': true, 'overrides': {}}"
       },
-      "line-comment-position" : {
-        "active" : 0,
-        "optionString" : "{'position': 'above'}"
-      },
       "linebreak-style" : {
         "active" : 0,
         "optionString" : "'unix'"
@@ -708,10 +704,6 @@
       "max-statements-per-line" : {
         "active" : 0,
         "optionString" : "{'max': 1}"
-      },
-      "multiline-comment-style" : {
-        "active" : 0,
-        "optionString" : "'starred-block'"
       },
       "multiline-ternary" : {
         "active" : 0,
@@ -854,7 +846,8 @@
         "active" : 0
       },
       "no-extra-boolean-cast" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'enforceForInnerExpressions': false}"
       },
       "no-extra-label" : {
         "active" : 0
@@ -939,7 +932,8 @@
         "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowEscape': false}"
       },
       "no-mixed-operators" : {
         "active" : 0,
@@ -979,9 +973,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -993,6 +984,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
@@ -1307,7 +1301,8 @@
         "active" : 0
       },
       "require-unicode-regexp" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'requireFlag': 'u'}"
       },
       "require-yield" : {
         "active" : 1
@@ -1747,6 +1742,7 @@
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
+    "tsJSXFragmentFactory" : "Fragment",
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
