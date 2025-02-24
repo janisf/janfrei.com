@@ -9,12 +9,10 @@
   ],
   "creatorBuild" : "34592",
   "files" : {
-    "\/.github\/workflows\/static.yml" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/.github\/workflows\/static.yml",
+    "\/.github" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/.github",
       "oF" : 0
     },
     "\/.gitignore" : {
@@ -1722,7 +1720,7 @@
     ],
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
-    "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
+    "skippedFoldersString" : "_logs,logs,.idea,\/storage\/framework\/sessions,node_modules,\/.github,log,_cache,cache",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
     "tsAllowArbitraryExtensions" : 0,
