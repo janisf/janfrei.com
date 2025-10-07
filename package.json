@@ -4,8 +4,9 @@
   "description": "Personal landing page for janfrei.com",
   "scripts": {
     "build:css": "tailwindcss -i ./source/css/main.css -o ./build/css/main.css --minify",
-    "build:html": "cp source/index.html build/index.html",
-    "build:assets": "mkdir -p build/assets && cp -r source/assets/* build/assets/",
+    "build:html": "cp source/index.html build/index.html && replace-in-file __VERSION__ $npm_package_version build/index.html --isRegex",
+    "build:webp": "npx sharp-cli -i 'source/assets/*.jpg' -o build/assets -f webp -q 85",
+    "build:assets": "mkdir -p build/assets && cp -r source/assets/* build/assets/ && npm run build:webp",
     "build": "npm run build:css && npm run build:html && npm run build:assets",
     "watch:css": "tailwindcss -i ./source/css/main.css -o ./build/css/main.css --watch",
     "watch:html": "chokidar 'source/index.html' -c 'npm run build:html'",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "chokidar-cli": "^3.0.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "replace-in-file": "^8.3.0",
+    "sharp-cli": "^5.2.0"
   }
 }
