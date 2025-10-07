@@ -1,6 +1,6 @@
 {
   "name": "janfrei-com",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Personal landing page for janfrei.com",
   "scripts": {
     "build:css": "tailwindcss -i ./source/css/main.css -o ./build/css/main.css --minify",
