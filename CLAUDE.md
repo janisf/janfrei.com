@@ -20,14 +20,13 @@ This project uses **npm scripts** with TailwindCSS CLI for building and watching
 
 ### Commands:
 - `npm run dev` - **Start development server** (builds, watches all files, serves on http://localhost:3000 with auto-reload)
-- `npm run build` - Build the entire site (CSS + HTML + JS + assets + WebP generation)
+- `npm run build` - Build the entire site (CSS + HTML + assets + WebP generation)
 - `npm run serve` - Serve the build directory with BrowserSync
 - `npm run watch:css` - Watch CSS files only
 - `npm run watch:html` - Watch HTML files only
 - `npm run watch:assets` - Watch asset files only
 - `npm run build:css` - Build and minify CSS only
 - `npm run build:html` - Copy HTML to build directory and replace version
-- `npm run build:js` - Copy Vue.js production build to build directory
 - `npm run build:assets` - Copy assets to build directory and generate WebP images
 - `npm run build:webp` - Generate WebP versions from JPG images
 
@@ -40,8 +39,7 @@ This project uses **npm scripts** with TailwindCSS CLI for building and watching
 The build script:
 - Processes TailwindCSS via the Tailwind CLI
 - Compiles and minifies `source/css/main.css` to `build/css/main.css`
-- Copies `source/index.html` to `build/index.html` and replaces `__VERSION__` with the current version from `package.json`
-- Copies Vue.js production build from `node_modules` to `build/js/vue.js` (156KB)
+- Copies `source/index.html` to `build/index.html` and replaces all `__VERSION__` occurrences with the current version from `package.json`
 - Copies all files from `source/assets/` to `build/assets/`
 - Automatically generates WebP versions from all JPG images in `source/assets/` (quality: 85%)
 
@@ -63,11 +61,12 @@ The project uses **TailwindCSS 3.x** with custom color extensions for social med
 
 ## Frontend Architecture
 
-The page uses a minimal Vue.js 3 setup (locally bundled, not compiled):
-- Vue.js production build is bundled with the site at `build/js/vue.js` (156KB)
-- Vue app mounts to `#social-media-links`
+The page uses a minimal Vue.js 3 setup (CDN-loaded from UNPKG):
+- Vue.js loads from UNPKG CDN with preconnect for optimal performance
+- Vue app mounts to `#social-media-links` after DOM is ready
 - Social media data is defined inline in the HTML (`socialMedia` array)
-- Each social item includes: `url`, `icon` (SVG string), and `color` (Tailwind hover classes)
+- Each social item includes: `url`, `icon` (SVG string), `color` (Tailwind hover classes), and `label` (for accessibility)
+- Scripts are loaded at the end of `<body>` for optimal First Contentful Paint (FCP)
 
 When editing social media links or icons, modify the `socialMedia` array in [source/index.html](source/index.html).
 
@@ -76,8 +75,13 @@ When editing social media links or icons, modify the `socialMedia` array in [sou
 The site deploys automatically to GitHub Pages via GitHub Actions ([.github/workflows/static.yml](.github/workflows/static.yml)):
 - Trigger: Push to `main` branch
 - CI installs Node.js 20 and dependencies with `npm ci`
-- CI runs `npm run build` to generate the `build/` directory (including CSS compilation, version replacement, Vue.js bundling, and WebP generation)
+- CI runs `npm run build` to generate the `build/` directory (including CSS compilation, version replacement, and WebP generation)
 - CI uploads and deploys the `build/` directory to GitHub Pages
+
+**Performance optimizations**:
+- Vue.js is loaded from UNPKG CDN (not bundled) with `preconnect` for faster connection
+- All JavaScript loads at the end of `<body>` for optimal FCP
+- CSS is the only render-blocking resource
 
 **Workflow**: Edit `source/` → Commit to `main` branch → Push → GitHub Actions automatically builds and deploys
 
