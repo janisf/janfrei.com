@@ -3,15 +3,10 @@
 
 module.exports =
 {
-  //
-  // WARNING: By default, CodeKit automatically populates the `content` array with all entries from [Project Settings > PurgeCSS]
-  // in CodeKit's UI. If you add ANY entries to the `content` array here, CodeKit will not auto-populate the array; it becomes your
-  // responsibility to include every type of file in your project that uses CSS rules. It is preferable to edit the PurgeCSS content
-  // list in CodeKit's UI.
-  //
-  // WARNING: DO NOT delete `content` or comment it out. If you do, CodeKit will treat this as a Tailwind 2.x project instead of 3.x.
-  //
-  content: [],
+  content: [
+    "./source/**/*.html",
+    "./source/**/*.js"
+  ],
 
 
   //
