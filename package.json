@@ -1,13 +1,14 @@
 {
   "name": "janfrei-com",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Personal landing page for janfrei.com",
   "scripts": {
     "build:css": "tailwindcss -i ./source/css/main.css -o ./build/css/main.css --minify",
     "build:html": "cp source/index.html build/index.html && replace-in-file __VERSION__ $npm_package_version build/index.html --isRegex",
+    "build:js": "mkdir -p build/js && cp node_modules/vue/dist/vue.global.prod.js build/js/vue.js",
     "build:webp": "npx sharp-cli -i 'source/assets/*.jpg' -o build/assets -f webp -q 85",
     "build:assets": "mkdir -p build/assets && cp -r source/assets/* build/assets/ && npm run build:webp",
-    "build": "npm run build:css && npm run build:html && npm run build:assets",
+    "build": "npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
     "watch:css": "tailwindcss -i ./source/css/main.css -o ./build/css/main.css --watch",
     "watch:html": "chokidar 'source/index.html' -c 'npm run build:html'",
     "watch:assets": "chokidar 'source/assets/**/*' -c 'npm run build:assets'",
@@ -20,7 +21,8 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "^10.4.21",
-    "tailwindcss": "^3.4.18"
+    "tailwindcss": "^3.4.18",
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
